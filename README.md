@@ -16,6 +16,6 @@ pip install flask flask-wtf lask-sqlalchemy
 To start up your web server:
 
 ```
-export FLASK_APP=microblog.py
+export FLASK_APP=notes.py
 flask run
 ```
