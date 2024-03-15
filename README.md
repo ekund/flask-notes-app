@@ -10,7 +10,15 @@ To learn more about Flask, I found the following two tutorials very useful:
 First, install the required libraries in your python virtual environment:
 
 ```
-pip install flask flask-wtf lask-sqlalchemy
+pip install flask flask-wtf flask-sqlalchemy flask-login emamil-validator
+```
+
+Ensure you have sqlite3 installed and create a table:
+
+```
+sqlite3 database/test.db
+sqlite> create table users(id integer PRIMARY KEY AUTOINCREMENT, username varchar(100), password varchar(100), email varchar(100));
+sqlite> 
 ```
 
 To start up your web server:
