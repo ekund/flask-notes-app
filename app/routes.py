@@ -25,7 +25,7 @@ def login():
             sa.select(Users).where(Users.username == form.username.data))
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return render_template('login.html', title='Sign In', form=form)
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or urlsplit(next_page).netloc != '':
@@ -35,7 +35,8 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    request.args
+    return redirect(url_for('login'), code=302)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
