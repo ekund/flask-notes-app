@@ -13,7 +13,9 @@ from urllib.parse import urlsplit
 @app.route('/index')
 @login_required
 def index():
-    return render_template('index.html', title='Home')
+    # TODO: read notes from DB
+    notes=[{"text": "note1", "date": "20240201", "text": "note2"}, {"text": "note2", "date": "20240301"}]
+    return render_template('index.html', title='Home', notes=notes)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
