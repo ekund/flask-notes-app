@@ -10,7 +10,7 @@ To learn more about Flask, I found the following two tutorials very useful:
 First, install the required libraries in your python virtual environment:
 
 ```
-pip install flask flask-wtf flask-sqlalchemy flask-login emamil-validator
+pip install flask flask-wtf flask-sqlalchemy flask-login email-validator
 ```
 
 Ensure you have sqlite3 installed and create a table:
